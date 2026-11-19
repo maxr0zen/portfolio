@@ -74,6 +74,15 @@ section{scroll-margin-top:1rem;padding-block:3.6rem;border-bottom:1px solid var(
 .contact{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:center;padding-block:4rem}
 .contact mark{display:inline-block;margin-top:.16em;padding:0 .12em;background:var(--lime);color:var(--bg)}
 footer{display:flex;justify-content:space-between;gap:1rem;padding-block:1.5rem}
+@media(min-width:64rem){
+  .wrap{width:min(100% - clamp(3rem,6vw,8rem),94rem)}
+  .hero{grid-template-columns:minmax(16rem,.65fr) minmax(0,1.35fr);gap:clamp(3rem,6vw,7rem)}
+  .hero h1{font-size:clamp(5.2rem,8.4vw,9rem)}
+  .hero-mark{width:min(72%,26rem)}
+  .about-grid{grid-template-columns:minmax(18rem,25rem) minmax(0,1fr)}
+  .portrait{width:min(100%,22rem)}
+  .about-grid p:not(.intro),.job li,.job p,.card-body p{max-width:64ch}
+}
 @media(max-width:63.99rem){.hero{grid-template-columns:1fr;min-height:auto;padding-block:3rem 3.5rem}.hero-aside{display:contents}.hero-main{grid-row:1}.hero-aside p:not(.meta){margin:0;max-width:34ch}.hero-aside .meta{margin:0}.hero-aside .control{justify-self:start}.hero-mark{width:clamp(7rem,24vw,12rem);margin:0;position:absolute;inset:auto 0 3rem auto}.hero{position:relative}.hero-aside p:not(.meta){max-width:min(34ch,65%)}.hero h1{font-size:clamp(3rem,11vw,6rem)}}
 @media(max-width:47.99rem){.masthead{margin-top:1rem}.bar{flex-wrap:wrap}.nav{order:3;width:100%;justify-content:space-between;gap:0;border-top:1px solid #577c3b}.nav .control{padding-inline:.3rem}.control::after{inset-inline:.3rem}.hero{padding-block:2.6rem 2.8rem;gap:1.3rem}.hero h1{font-size:clamp(2.25rem,12.25vw,4.6rem)}section{padding-block:2.45rem}.section-top{align-items:start;flex-direction:column}.projects,.about-grid,.stack,.job,.contact{grid-template-columns:1fr}.about-grid{gap:1.4rem}.portrait{width:min(100%,16rem)}.stack{gap:0}.stack>div{padding-block:1rem;border-top:1px solid var(--line)}.job{gap:.65rem}.credentials{grid-template-columns:1fr}.contact{gap:1.1rem;padding-block:3rem}footer{flex-direction:column;gap:0}.section-top>.control{margin-inline-start:-.65rem}}
 @media(max-width:47.99rem){.hero-mark{width:clamp(4.5rem,22vw,7rem);inset:auto 0 2.8rem auto}.hero-aside p:not(.meta){max-width:100%}.hero-aside .meta{max-width:calc(100% - 5rem)}}
